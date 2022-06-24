@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/oleg/Documents/projects/gb/c_sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj": {}
+    "/home/oleg/Documents/projects/git_gb/c-sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj": {}
   },
   "projects": {
-    "/home/oleg/Documents/projects/gb/c_sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj": {
+    "/home/oleg/Documents/projects/git_gb/c-sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/oleg/Documents/projects/gb/c_sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj",
+        "projectUniqueName": "/home/oleg/Documents/projects/git_gb/c-sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj",
         "projectName": "Example001_HelloConsole",
-        "projectPath": "/home/oleg/Documents/projects/gb/c_sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj",
+        "projectPath": "/home/oleg/Documents/projects/git_gb/c-sharp/lec-1/Example001_HelloConsole/Example001_HelloConsole.csproj",
         "packagesPath": "/home/oleg/.nuget/packages/",
-        "outputPath": "/home/oleg/Documents/projects/gb/c_sharp/lec-1/Example001_HelloConsole/obj/",
+        "outputPath": "/home/oleg/Documents/projects/git_gb/c-sharp/lec-1/Example001_HelloConsole/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/oleg/.nuget/NuGet/NuGet.Config"
