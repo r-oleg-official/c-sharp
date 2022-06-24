@@ -10,7 +10,7 @@ C# it's:
 C# a created by Anders Halesberg (Microsoft). C# - an alternative to JAVA. C# get more a things from C++, JAVA. 
 
 > Language of development it's only a instrument.
-> language's syntax study in a few days?? 00:05:30 - программист vs тыжпрограммист vs хакер.
+> Language's syntax study in a few days?? 00:05:30 - программист vs тыжпрограммист vs хакер.
 
 Успешный запуск "Hello, World!" - это означает правильные: установка, настройка, выполнение IDE.
 
