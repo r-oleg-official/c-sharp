@@ -54,7 +54,7 @@ After add of a changes to project:
     $ git commit -a, add message for the commit
     $ git push origin main
 
-Initiate `.netcore console`, add `.gitignore`:
+Prepare a directory to the project on C# and add the `.gitignore`:
 
     $ dotnet new console
     $ dotnet new gitirnore
