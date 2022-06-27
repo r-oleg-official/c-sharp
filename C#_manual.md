@@ -120,9 +120,9 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 
 Эти операторы поддерживаются всеми [целочисленными](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types) типами: `int`, `uint`, `byte`, `long`,...; и типами [с плавающей запятой](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types): `float`, `double`, `decimal`. `decimal` - точнее обрабатывает финансовые числа, а `float` и  `double` могут создать непредвиденные ошибки.
 
-string var_name = ...;
-int var_name = ...;
+string var_name = ...; <br>
+int var_name = ...; <br>
 bool var_name = ...; - `true`/`false` <br>
 bool? var_name = null; - <br>
-Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name);
+Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
 Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
