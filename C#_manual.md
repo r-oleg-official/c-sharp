@@ -87,7 +87,7 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 
 **Console.ReadLine()** - считывание данных, введенных user'ом.<br>
 **string username =**, где <br>
-* `string` - создание переменой со строковым типом данных;
+* `string` - создание переменой со строковым типом данных, аналогично: `int`, `bool`;
 * `username` - задать имя переменной.
 * `=` - присвоить, или положить значение/содержимое справа после знака `=` переменную `username`.
 
@@ -102,10 +102,27 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
     $ dotnet run
 
 ## Краткий словарь синтаксиса C#.
+[Справочник по C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/).
+`//` - comment, `=` - присвоение. <br>
+Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
 
-    // - comment
-    string var_name = ...;
-    int var_name = ...;
-    Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name);
-    Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
-    
+* `x ! y` - НЕ, (true, если x не равен y, или наоборот, иначе false);
+* `x & y` - И (true, если x=true y=true, else false);
+* `x ^ y` - ИЛИ, исключение (true: x=false, y=true, или x=true, y=false), (false: x=false, y=false), тот же результат как `!=bool`;
+* `x | y` - ИЛИ, исключение (true: x=false, y=true, или x=true, y=false), (false: x=false, y=false), если левый операнд `x = true`, то правый `y` не вычисляется;
+* `x && y` - И, (оператор к.з.), (true, если x=true y=true, else false), если `x=false`, то `y` не вычисляется;
+* `||` - ИЛИ, (оператор к.з.), (true, если x=true y=true, else false), если `x=false`, то `y` не вычисляется;
+* `bool?` - оператор допускает знач-е `NULL`, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators). 
+
+Операторы сравнения `==`, `<`, `>`, `<=`, `>=`, например:
+
+* `x == y` - оператор равенства/сравнения, если `x` или `y` не число [Double.NaN](https://docs.microsoft.com/ru-ru/dotnet/api/system.double.nan) или [Single.NaN](https://docs.microsoft.com/ru-ru/dotnet/api/system.single.nan), то результат `false`;
+
+Эти операторы поддерживаются всеми [целочисленными](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types) типами: `int`, `uint`, `byte`, `long`,...; и типами [с плавающей запятой](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types): `float`, `double`, `decimal`. `decimal` - точнее обрабатывает финансовые числа, а `float` и  `double` могут создать непредвиденные ошибки.
+
+string var_name = ...;
+int var_name = ...;
+bool var_name = ...; - `true`/`false` <br>
+bool? var_name = null; - <br>
+Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name);
+Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
