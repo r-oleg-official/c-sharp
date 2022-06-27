@@ -91,10 +91,21 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 * `username` - задать имя переменной.
 * `=` - присвоить, или положить значение/содержимое справа после знака `=` переменную `username`.
 
+
+
 Переменная (анг. variable) - контейнер/ID.
 
-## Краткий словарь.
+## Краткий словарь команд.
 
     $ dotnet new console
     $ dotnet new gitignore
     $ dotnet run
+
+## Краткий словарь синтаксиса C#.
+
+    // - comment
+    string var_name = ...;
+    int var_name = ...;
+    Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name);
+    Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
+    
