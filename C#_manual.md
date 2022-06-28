@@ -14,13 +14,12 @@ C# a created by Anders Halesberg (Microsoft). C# - an alternative to JAVA. C# ge
 
 Успешный запуск "Hello, World!" - это означает правильные: установка, настройка, выполнение IDE.
 
-Особенности установки пакета SDK, ASP.NET 00:10:52. Для MacOS пакет x64, arm64 на процессорах, например, M1 работает неверно.
-
+Особенности установки пакета SDK, ASP.NET 00:10:52. Для MacOS пакет x64, arm64 на процессорах, например, M1 (Apple) работает неверно.
 
 ## 2. **Configuration VS Code.**
 
 ### *Extensions.*
-Install extensions to VS Code:
+Install extensions to VS Code, find:
 
 1. `C#` by Mscft (C# for VS Code powered by Omnisharp);
 2. `C# Extentions` by jchannon. Extension "no longer under development". ??? Пригодиться для сложных проектов и углубленного изучения C#.
@@ -57,13 +56,15 @@ After add of a changes to project:
 Prepare a directory to the project on C# and add the `.gitignore`:
 
     $ dotnet new console
-    $ dotnet new gitirnore
+    $ dotnet new gitignore
+    $ dotnet run - компиляция и запуск программы
+
+Если в терминале вывелось сообщение "Hello, World!", значит всё в порядке, можно начинать писать код. 
+
+Команда `dotnet new gitignore` создаст файл `.gitignore`, который нужен, чтобы в удал-й репо-й не отправлялись ненужные файлы при компиляции - *__признак дурного тона__*. Важен файл `Program.cs`.
+
 
 File `*.cs` - he need us.
-
-Команда запуска кода:
-
-    $ dotnet run 
 
 ### Gitignore. [github.](https://github.com/r-oleg-official/VisualStudio.git)
 
@@ -85,7 +86,7 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 * **"Text"** - текст сообщения `Text` заключается в `""`.<br>
 * **;** - завершение строки кода в C#.<br>
 
-**Console.ReadLine()** - считывание данных, введенных user'ом.<br>
+**Read()** - считывание данных, введенных `user`'ом без перехода на новую строку.<br>
 **string username =**, где <br>
 * `string` - создание переменой со строковым типом данных, аналогично: `int`, `bool`;
 * `username` - задать имя переменной.
@@ -102,8 +103,16 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
     $ dotnet run
 
 ## Краткий словарь синтаксиса C#.
-[Справочник по C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/).
-`//` - comment, `=` - присвоение. <br>
+[Справочник по C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/).<br>
+`//` - comment, `=` - присвоение.
+
+string var_name = ...; <br>
+int var_name = ...; <br>
+bool var_name = ...; - `true`/`false` <br>
+bool? var_name = null; - <br>
+Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
+Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
+
 Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
 
 * `x ! y` - НЕ, (true, если x не равен y, или наоборот, иначе false);
@@ -120,9 +129,3 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 
 Эти операторы поддерживаются всеми [целочисленными](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types) типами: `int`, `uint`, `byte`, `long`,...; и типами [с плавающей запятой](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types): `float`, `double`, `decimal`. `decimal` - точнее обрабатывает финансовые числа, а `float` и  `double` могут создать непредвиденные ошибки.
 
-string var_name = ...; <br>
-int var_name = ...; <br>
-bool var_name = ...; - `true`/`false` <br>
-bool? var_name = null; - <br>
-Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
-Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
