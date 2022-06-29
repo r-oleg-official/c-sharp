@@ -116,6 +116,8 @@ int var_name = ...; <br>
 bool var_name = ...; - `true`/`false` <br>
 bool? var_name = null; - <br>
 Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
+> Если в конце строки появляется артефакт в виде "**`%`**" - ничего страшного код правильный, проблема с `VSC`.
+
 Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
 
 Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
