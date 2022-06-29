@@ -111,11 +111,18 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 [Справочник по C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/).<br>
 `//` - comment, `=` - присвоение.
 
-string var_name = ...; - строковые <br>
-int var_name = ...; - целочисленные <br>
-double var_name = ...; - вещественные <br>
-bool var_name = ...; - `true`/`false` <br>
-bool? var_name = null; - <br>
+`string` var_name = ...; - строковые, ссылочный тип, 0 (пустая строка) $\div$ много, 4byte $\div$ 2Gb
+
+`int` var_name = ...; - целочисленные, 32 bit, -2,14x10<sup>9</sup> $\div$ 2.14x10<sup>9</sup> 
+
+`double` var_name = ...; - вещественные, 64 bit, $\pm$ 5x10<sup>-324</sup> $\div$ $\pm$ 1,7x10<sup>308</sup>
+
+`char` - представляющий символ Юникода UTF-16, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/char)
+
+`bool` var_name = ...; - `true`/`false`, 1 byte (думаю бит??)
+
+`bool?` var_name = null; -
+
 Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
 > Если в конце строки появляется артефакт в виде "**`%`**" - ничего страшного код правильный, проблема с `VSC`.
 
