@@ -111,8 +111,9 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 [Справочник по C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/).<br>
 `//` - comment, `=` - присвоение.
 
-string var_name = ...; <br>
-int var_name = ...; <br>
+string var_name = ...; - строковые <br>
+int var_name = ...; - целочисленные <br>
+double var_name = ...; - вещественные <br>
 bool var_name = ...; - `true`/`false` <br>
 bool? var_name = null; - <br>
 Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
