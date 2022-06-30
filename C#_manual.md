@@ -115,7 +115,7 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 
 `int` var_name = ...; - целочисленные, 32 bit, -2,14x10<sup>9</sup> $\div$ 2.14x10<sup>9</sup> 
 
-`double` var_name = ...; - вещественные, 64 bit, $\pm$ 5x10<sup>-324</sup> $\div$ $\pm$ 1,7x10<sup>308</sup>
+`double` var_name = ...; - вещественные, 64 bit, $\pm$ 5,0x10<sup>-324</sup> $\div$ $\pm$ 1,7x10<sup>308</sup>
 
 `char` - представляющий символ Юникода UTF-16, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/char)
 
@@ -127,6 +127,8 @@ Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
 > Если в конце строки появляется артефакт в виде "**`%`**" - ничего страшного код правильный, проблема с `VSC`.
 
 Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
+
+`+`, `-`, `/`, `*`, `%`, `()` - классические арифмет-е операции опред-ся этими операторами.
 
 Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
 
@@ -143,4 +145,8 @@ Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
 * `x == y` - оператор равенства/сравнения, если `x` или `y` не число [Double.NaN](https://docs.microsoft.com/ru-ru/dotnet/api/system.double.nan) или [Single.NaN](https://docs.microsoft.com/ru-ru/dotnet/api/system.single.nan), то результат `false`;
 
 Эти операторы поддерживаются всеми [целочисленными](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/integral-numeric-types) типами: `int`, `uint`, `byte`, `long`,...; и типами [с плавающей запятой](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/floating-point-numeric-types): `float`, `double`, `decimal`. `decimal` - точнее обрабатывает финансовые числа, а `float` и  `double` могут создать непредвиденные ошибки.
+
+Генератор псевдослучайных целых чисел (`min` $\div$ `max-1`):
+
+    new Random().Next(min, max);
 
