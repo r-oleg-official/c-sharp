@@ -107,31 +107,52 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
     $ dotnet new gitignore
     $ dotnet run
 
-## Краткий словарь синтаксиса C#.
+## F.A.Q. C#.
+
 [Справочник по C#](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/).<br>
 `//` - comment, `=` - присвоение.
 
-`string` var_name = ...; - строковые, ссылочный тип, 0 (пустая строка) $\div$ много, 4byte $\div$ 2Gb
+### 1. Variable's types 
 
-`int` var_name = ...; - целочисленные, 32 bit, -2,14x10<sup>9</sup> $\div$ 2.14x10<sup>9</sup> 
+`string` var_name = ... - строковые, ссылочный тип, 0 (пустая строка) $\div$ много, 4byte $\div$ 2Gb
 
-`double` var_name = ...; - вещественные, 64 bit, $\pm$ 5,0x10<sup>-324</sup> $\div$ $\pm$ 1,7x10<sup>308</sup>
+`int` var_name = ... - целочисленные, 32 bit, -2,14x10<sup>9</sup> $\div$ 2.14x10<sup>9</sup> 
+
+`double` var_name = ... - вещественные, 64 bit, $\pm$ 5,0x10<sup>-324</sup> $\div$ $\pm$ 1,7x10<sup>308</sup>
 
 `char` - представляющий символ Юникода UTF-16, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/char)
 
-`bool` var_name = ...; - `true`/`false`, 1 byte (думаю бит??)
+`bool` var_name = ... - `true`/`false`, 1 byte (думаю бит??)
 
-`bool?` var_name = null; -
+`bool?` var_name = null - 
 
-Console.WriteLine("Text" + var_name); | Console.Write("Text" + var_name); <br>
+Краткий вариант присвоения переменным значений, через `","`:
+
+        int xa = 1, ya = 1, xb = 1, yb = 30;
+
+or
+
+    int xa = 40, ya = 1, 
+        xb = 1, yb = 30,
+        xc = 80, yc = 30;
+
+
+### 2. Console.
+
+    Console.WriteLine("Text" + var_name)  |  Console.Write("Text" + var_name)
+
 > Если в конце строки появляется артефакт в виде "**`%`**" - ничего страшного код правильный, проблема с `VSC`.
 
-Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
+    Console.ReadLine("Text" + var_name) | Console.Read("Text" + var_name)
+    Console.Clear() - очистка экрана консоли.
+    Console.SetCursorPosition(x, y)
 
-`+`, `-`, `/`, `*`, `%`, `()` - классические арифмет-е операции опред-ся этими операторами.
+где, `int x`- отступ от левого края, `int y` - отступ от верхнего края.
 
-Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
 
+### 3. Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
+
+* `+`, `-`, `/`, `*`, `%`, `()` - классические операторы арифмет-х операций;
 * `x ! y` - НЕ, (true, если x не равен y, или наоборот, иначе false);
 * `x & y` - И (true, если x=true y=true, else false);
 * `x ^ y` - ИЛИ, исключение (true: x=false, y=true, или x=true, y=false), (false: x=false, y=false), тот же результат как `!=bool`;
@@ -140,7 +161,9 @@ Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
 * `||` - ИЛИ, (оператор к.з.), (true, если x=true y=true, else false), если `x=false`, то `y` не вычисляется;
 * `bool?` - оператор допускает знач-е `NULL`, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators). 
 
-Операторы сравнения `==`, `<`, `>`, `<=`, `>=`, например:
+### 4. Операторы сравнения.
+
+`==`, `<`, `>`, `<=`, `>=`, например:
 
 * `x == y` - оператор равенства/сравнения, если `x` или `y` не число [Double.NaN](https://docs.microsoft.com/ru-ru/dotnet/api/system.double.nan) или [Single.NaN](https://docs.microsoft.com/ru-ru/dotnet/api/system.single.nan), то результат `false`;
 
@@ -148,7 +171,7 @@ Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
 
 Генератор псевдослучайных целых чисел (`min` $\div$ `max-1`):
 
-    new Random().Next(min, max);
+    new Random().Next(min, max)
 
 Condition `if...else`:
 
@@ -159,16 +182,19 @@ Condition `if...else`:
 
 Или такой рабочий вариант:
 
-    if (a > max) max = a;
+    if (a > max) max = a
 
 В `if (username == "Oleg")` - условие выполнится только при полном совпадении значения `username`. Для решения проблемы можно исп.:
 
  `if (username.ToLower() == "oleg")` - в таком случае `ToLower()` переведёт все значения в нижний регистр.
 
-Цикл `while ... do`:
+### 5. Circles.
+
+Circle `while ... do`:
 
     int count = 0;
     while (count < 100)
         {Actions;
          count = count + 1;
         }
+
