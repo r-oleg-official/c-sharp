@@ -150,3 +150,14 @@ Console.ReadLine("Text" + var_name);  | Console.Read("Text" + var_name);
 
     new Random().Next(min, max);
 
+Condition `if...else`:
+
+    if () 
+        {Actions 1;}
+    else
+        {Actions 2;}
+
+В `if (username == "Oleg")` - условие выполнится только при полном совпадении значения `username`. Для решения проблемы можно исп.:
+
+ `if (username.ToLower() == "oleg")` - в таком случае `ToLower()` переведёт все значения в нижний регистр.
+
