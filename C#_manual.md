@@ -157,7 +157,18 @@ Condition `if...else`:
     else
         {Actions 2;}
 
+Или такой рабочий вариант:
+
+    if (a > max) max = a;
+
 В `if (username == "Oleg")` - условие выполнится только при полном совпадении значения `username`. Для решения проблемы можно исп.:
 
  `if (username.ToLower() == "oleg")` - в таком случае `ToLower()` переведёт все значения в нижний регистр.
 
+Цикл `while ... do`:
+
+    int count = 0;
+    while (count < 100)
+        {Actions;
+         count = count + 1;
+        }
