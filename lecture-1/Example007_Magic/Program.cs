@@ -22,10 +22,40 @@ int xa = 40, ya = 1,
 Console.SetCursorPosition(xa, ya);
 Console.WriteLine("+");
 Console.SetCursorPosition(xb, yb);
-Console.Write("+");
+Console.WriteLine("+");
 Console.SetCursorPosition(xc, yc);
 Console.WriteLine("+");
 
-// Выбор случайной точки, например, 
+// Определить случайную точку, например, одну из вершин.
 int x = xa, y = xb;
-
+// Счетчик для оперд-я кол-во нахождения отрезков и 
+// и деления их пополам.
+int count = 0;
+while (count < 10000)
+{
+    // сгенер-ть случ число в полуинтервале [0,3), 0, 1, 2
+    int what = new Random().Next(0, 3);
+    // установить 1-ю точку отрезка
+    if (what == 0)
+    {
+        x = (x + xa) / 2;
+        y = (y + ya) / 2;
+    }
+    // установить 2-ю точку отрезка, середину
+    if (what == 1)
+    {
+        x = (x + xb) / 2;
+        y = (y + yb) / 2;
+    }
+    // установить 3-ю точку отрезка
+    if (what == 0)
+    {
+        x = (x + xc) / 2;
+        y = (y + yc) / 2;
+    }
+    Console.SetCursorPosition(x, y);
+    Console.WriteLine("+");
+    //count = count + 1;
+    //count +=1;
+    count++;
+}
