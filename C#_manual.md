@@ -99,7 +99,7 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 * верно: numberA, number2;
 * неверно: 2number, _numberA, number_A.
 
-> Переменные именуются лат. буквами, цифрами. Начинается с нижнего регистра, стиль `CamelCase`. Не начинаются с цифры, "_", не принят стиль `Snake_Case`.
+> Переменные именуются лат. буквами, цифрами. Начинается с нижнего регистра, стиль `CamelCase`. Не начинаются с цифры, "_", не принят стиль `Snake_Case` (Сергей), `Snake_Case` для именования констант (Денис).
 
 ## Краткий словарь команд.
 
@@ -125,6 +125,12 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 `bool` var_name = ... - `true`/`false`, 1 byte (думаю бит??)
 
 `bool?` var_name = null - 
+
+Задание переменной:
+
+    int a = 0 
+
+Где, `int` - указать тип, `a` - задать переменную, `= 0` - инициализировать переменную. Теперь можно использовать.
 
 Краткий вариант присвоения переменным значений, через `","`:
 
@@ -184,6 +190,26 @@ Condition `if...else`:
 
     if (a > max) max = a
 
+if (true)
+{
+    Actions;
+}
+
+else if (true)
+
+{ 
+    Actions;
+}
+
+else if (true)
+
+{ 
+    Actions;
+}
+
+....
+И так бесконечно.
+
 В `if (username == "Oleg")` - условие выполнится только при полном совпадении значения `username`. Для решения проблемы можно исп.:
 
  `if (username.ToLower() == "oleg")` - в таком случае `ToLower()` переведёт все значения в нижний регистр.
@@ -198,3 +224,6 @@ Circle `while ... do`:
          count = count + 1;
         }
 
+### 6. Sources.
+1. [METANIT.COM](https://metanit.com/). 
+2. [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/).
