@@ -3,13 +3,12 @@ Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int count = 2;
 
-while (count < number) {
-       Console.Write(count);
-        if (count == number -2) {
-            Console.Write(".");
+while (count <= number) {
+        if (count == number) {
+            Console.WriteLine(count + "."); 
         }
         else {
-            Console.Write(", ");
+            Console.Write(count + ", "); 
         }
-    count = count + 2;    
+        count = count + 2;    
 }
