@@ -94,9 +94,25 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 
 Переменная (анг. variable) - контейнер/ID.
 
+Задание переменной:
+
+    int a = 0 
+
+Где, `int` - указать тип, `a` - задать переменную, `= 0` - инициализировать переменную. Теперь можно использовать.
+
+Краткий вариант присвоения переменным значений, через `","`:
+
+        int xa = 1, ya = 1, xb = 1, yb = 30;
+
+or
+
+    int xa = 40, ya = 1, 
+        xb = 1,  yb = 30,
+        xc = 80, yc = 30;
+
 Пример, именования переменной:
 
-* верно: numberA, number2;
+* верно: numberA, number2; - так как они локальные
 * неверно: 2number, _numberA, number_A.
 
 > Переменные именуются лат. буквами, цифрами. Начинается с нижнего регистра, стиль `CamelCase`. Не начинаются с цифры, "_", не принят стиль `Snake_Case` (Сергей), `Snake_Case` для именования констант (Денис).
@@ -106,6 +122,10 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
     $ dotnet new console
     $ dotnet new gitignore
     $ dotnet run
+
+При делении двух `integer` переменных, чтобы сохранить остаток, нужно чтобы хотя бы одна была `double`. 
+
+
 
 ## F.A.Q. C#.
 
@@ -122,25 +142,10 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 
 `char` - представляющий символ Юникода UTF-16, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/builtin-types/char)
 
-`bool` var_name = ... - `true`/`false`, 1 byte (думаю бит??)
+`bool` var_name = ... - `true`/`false`, 1 byte (думаю бит??). В переменную сохраняется результат сравнения, или исп.-ся как флаг.
 
 `bool?` var_name = null - 
 
-Задание переменной:
-
-    int a = 0 
-
-Где, `int` - указать тип, `a` - задать переменную, `= 0` - инициализировать переменную. Теперь можно использовать.
-
-Краткий вариант присвоения переменным значений, через `","`:
-
-        int xa = 1, ya = 1, xb = 1, yb = 30;
-
-or
-
-    int xa = 40, ya = 1, 
-        xb = 1, yb = 30,
-        xc = 80, yc = 30;
 
 
 ### 2. Console.
@@ -181,7 +186,7 @@ or
 
 Condition `if...else`:
 
-    if () 
+    if (true) 
         {Actions 1;}
     else
         {Actions 2;}
@@ -206,7 +211,10 @@ else if (true)
 { 
     Actions;
 }
-
+else
+{
+    Actions;
+}
 ....
 И так бесконечно.
 
