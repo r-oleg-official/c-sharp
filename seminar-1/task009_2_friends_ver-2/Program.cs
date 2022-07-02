@@ -13,19 +13,20 @@ int directionDog = 1; // 1 - от 1-го ко 2-му, 2 - от 2-го к 1-му.
 while (distance > 2)
 {
     if (directionDog == 1)
-    //if (firstFriendsDirection)
+    //if (firstFriendsDirection) // значение уже рез-т сравнения (если true).
+    // 1-я итерация - переход на else.
     {
         time = distance / (secondFriendsSpeed + dogSpeed);
         directionDog = 2;
         //time = distance / (secondFriendsSpeed + dogSpeed);
-        //firstFriendsDirection = false;
+        //firstFriendsDirection = false; // смена true на false.
     }
     else
     {
         time = distance / (firstFriendsSpeed + dogSpeed);
         directionDog = 1;
         //time = distance / (firstFriendsSpeed + dogSpeed);
-        //firstFriendsDirection = true;
+        //firstFriendsDirection = true; //в 1-й итерации перекл-ет на false.
     }
 
     distance = distance - (firstFriendsSpeed + secondFriendsSpeed) * time;
