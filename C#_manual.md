@@ -195,28 +195,38 @@ Condition `if...else`:
 
     if (a > max) max = a
 
-if (true)
-{
-    Actions;
-}
+Ещё пример:
 
-else if (true)
-
-{ 
-    Actions;
-}
-
-else if (true)
-
-{ 
-    Actions;
-}
-else
-{
-    Actions;
-}
+        if (true)
+    {
+        Actions;
+    }
+    else if (true)
+    { 
+        Actions;
+    }
+    else if (true)
+    { 
+        Actions;
+    }
+    else
+    {
+        Actions;
+    }
 ....
 И так бесконечно.
+
+Пример, с `boolean` переменной `var`:
+
+    if (!var) //значит, что неравно var.
+    {
+        Actions;
+    }
+    else 
+    { 
+        Actions;
+    }
+
 
 В `if (username == "Oleg")` - условие выполнится только при полном совпадении значения `username`. Для решения проблемы можно исп.:
 
@@ -230,8 +240,77 @@ Circle `while ... do`:
     while (count < 100)
         {Actions;
          count = count + 1;
-        }
+         count++; }
 
-### 6. Sources.
+Счетчик, варианты: 
+
+    count = count + 1
+    count += 1; (-=, *=, /=)
+    count++;
+
+Суффиксная форма и постсуффиксная форма `count`:
+
+    count++ - сначала выводится значение count, а потом прибавляется 1-ца
+    ++count - сначала прибавится 1-ца, а потом выведится значение count.
+
+Example:
+
+`int a = 2;`
+
+`int b = 3;`
+
+`int c = a++ + b;` // `a=2`, `b=3`, `c=5`, дальше будет `a=3`, т.е. сначала выполняется выражение (берется значение `a`), потом `a+1`.
+
+`int c = ++a + b;` // `a=3`, `b=3`, `c=6`, дальше будет `a=3`, т.е. сначала к `a+1`, а потом выполняется выражение (берется значение `a`).
+
+Подобное выражение `a++`, или `++a`, нужно чтобы не писать 
+
+### 6. Спецсимволы.
+
+#### 6.1. $ — интерполяция строк. [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/tokens/interpolated)
+
+Example:
+
+    string name = "Mark";
+    var date = DateTime.Now;
+
+    // Composite formatting:
+    Console.WriteLine("Hello, {0}! Today is {1}, it's {2:HH:mm} now.", name, date.DayOfWeek, date);
+    // String interpolation:
+    Console.WriteLine($"Hello, {name}! Today is {date.DayOfWeek}, it's {date:HH:mm} now.");
+    // Both calls produce the same output that is similar to:
+    // Hello, Mark! Today is Wednesday, it's 19:40 now.
+
+
+
+#### 6.2. @ - буквальный идентификатор. [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/tokens/verbatim) 
+
+Example 1:
+
+    string[] @for = { "John", "James", "Joan", "Jamie" };
+    for (int ctr = 0; ctr < @for.Length; ctr++)
+    {
+        Console.WriteLine($"Here is your gift, {@for[ctr]}!");
+    }
+    // The example displays the following output:
+    //     Here is your gift, John!
+    //     Here is your gift, James!
+    //     Here is your gift, Joan!
+    //     Here is your gift, Jamie!
+
+Example 2:
+
+    string s1 = "He said, \"This is the last \u0063hance\x0021\"";
+    string s2 = @"He said, ""This is the last \u0063hance\x0021""";
+
+    Console.WriteLine(s1);
+    Console.WriteLine(s2);
+    // The example displays the following output:
+    //     He said, "This is the last chance!"
+    //     He said, "This is the last \u0063hance\x0021"
+
+
+
+### 7. Sources.
 1. [METANIT.COM](https://metanit.com/). 
 2. [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/).
