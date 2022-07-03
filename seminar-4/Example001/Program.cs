@@ -1,5 +1,5 @@
 ﻿//Найти сумму ряда чисел до A
-Console.WriteLine("Введите число А: ");
+Console.Write("Введите число А: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int sum = 0;
 int count = 1;
@@ -10,6 +10,8 @@ while (count <= a)
 }
 Console.WriteLine(sum);
 
+//circle "for"
+sum = 0;
 for (int i = 1; i <= a; i++)
 {
     sum += i;
