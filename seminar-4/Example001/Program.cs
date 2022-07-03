@@ -8,7 +8,7 @@ while (count <= a)
     sum += count; // sum = sum + count
     count++;
 }
-Console.WriteLine(sum);
+Console.WriteLine("Сумма чисел от 1 до " + a + ": " + sum + ".");
 
 //circle "for"
 sum = 0;
@@ -16,4 +16,4 @@ for (int i = 1; i <= a; i++)
 {
     sum += i;
 }
-Console.WriteLine(sum);
+Console.WriteLine("Сумма чисел от 1 до " + a + ": " + sum + ".");
