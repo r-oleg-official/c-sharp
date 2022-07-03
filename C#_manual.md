@@ -96,7 +96,7 @@ Generator `.gitignore`, [see.](https://www.toptal.com/developers/gitignore)
 
 Задание переменной:
 
-    int a = 0 
+    int a = 0; 
 
 Где, `int` - указать тип, `a` - задать переменную, `= 0` - инициализировать переменную. Теперь можно использовать.
 
@@ -146,8 +146,6 @@ or
 
 `bool?` var_name = null - 
 
-
-
 ### 2. Console.
 
     Console.WriteLine("Text" + var_name)  |  Console.Write("Text" + var_name)
@@ -160,8 +158,31 @@ or
 
 где, `int x`- отступ от левого края, `int y` - отступ от верхнего края.
 
+### 3. Конвертация переменных.
 
-### 3. Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
+Когда `user` вводит число в консоль получается `string`-переменная, для перевода в число нужна конвертация:
+
+    int a = Convert.ToInt32(ReadLine());
+
+Конвертация `int a` в ` double b` без функции `Convert.`:
+
+    int a = 2;
+    double b = (double) a;
+
+Или наоборот:
+
+    double a = 2;
+    int b = (int) a;
+
+>! Перевод в `double` может понадобиться, если делить 2-а `int`-числа, тогда нужно одно из них перевести. C# автоматически не конвертирует.
+
+В след. примере, в случае прибавления к `string`-переменной `"Text"` `int`-переменную `var_name`:
+
+    Console.WriteLine("Text" + var_name);
+получается `string`-переменная. 
+
+
+### 4. Логические операторы, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators):<br>
 
 * `+`, `-`, `/`, `*`, `%`, `()` - классические операторы арифмет-х операций;
 * `x ! y` - НЕ, (true, если x не равен y, или наоборот, иначе false);
@@ -172,7 +193,7 @@ or
 * `||` - ИЛИ, (оператор к.з.), (true, если x=true y=true, else false), если `x=false`, то `y` не вычисляется;
 * `bool?` - оператор допускает знач-е `NULL`, [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/boolean-logical-operators). 
 
-### 4. Операторы сравнения.
+### 5. Операторы сравнения.
 
 `==`, `<`, `>`, `<=`, `>=`, например:
 
@@ -183,6 +204,12 @@ or
 Генератор псевдослучайных целых чисел (`min` $\div$ `max-1`):
 
     new Random().Next(min, max)
+
+Задать переменную типа `int` со случайным числом (`0` $\div$ `9`):
+
+    int a = new Random().Next(0, 10)
+
+### 6. Условия, ветвления.
 
 Condition `if...else`:
 
@@ -232,7 +259,7 @@ Condition `if...else`:
 
  `if (username.ToLower() == "oleg")` - в таком случае `ToLower()` переведёт все значения в нижний регистр.
 
-### 5. Circles.
+### 7. Circles.
 
 Circle `while ... do`:
 
@@ -265,9 +292,9 @@ Example:
 
 Подобное выражение `a++`, или `++a`, нужно чтобы не писать 
 
-### 6. Спецсимволы.
+### 8. Спецсимволы.
 
-#### 6.1. $ — интерполяция строк. [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/tokens/interpolated)
+#### 8.1. $ — интерполяция строк. [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/tokens/interpolated)
 
 Example:
 
@@ -283,7 +310,7 @@ Example:
 
 
 
-#### 6.2. @ - буквальный идентификатор. [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/tokens/verbatim) 
+#### 9.2. @ - буквальный идентификатор. [см](https://docs.microsoft.com/ru-ru/dotnet/csharp/language-reference/tokens/verbatim) 
 
 Example 1:
 
@@ -309,8 +336,12 @@ Example 2:
     //     He said, "This is the last chance!"
     //     He said, "This is the last \u0063hance\x0021"
 
-
-
-### 7. Sources.
+### 10. Sources.
 1. [METANIT.COM](https://metanit.com/). 
 2. [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/).
+
+### 11. IDE.
+
+Денис рекомендует для C# - `Rider`. `VS` даже полноценный глючит, подвисает. 
+
+`Rider` с `Unity` в связке лучше работает.
