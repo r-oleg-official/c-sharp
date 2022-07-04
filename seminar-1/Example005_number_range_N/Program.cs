@@ -2,7 +2,6 @@
 //My version.
 Console.Write("Введите число N: ");
 int n = Convert.ToInt32(Console.ReadLine());
-//int minN = -n;
 
 for (int i = -n; i < (n + 1); i++)
 {
