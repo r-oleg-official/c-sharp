@@ -1,4 +1,5 @@
 ﻿// Entering a three-digit number. Displaying the last digit.
+//My version.
 Console.Write("Введите трёхзначное целое число: ");
 int lastDigit = Convert.ToInt32(Console.ReadLine());
 if (lastDigit < 100 | lastDigit > 999)
