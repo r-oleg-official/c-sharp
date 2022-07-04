@@ -8,7 +8,7 @@ if (a * a == b || b * b == a)
 {
     Console.WriteLine("ДА");
 }
-else if (a * a != b || b * b != a)
+else
 {
     Console.WriteLine("НЕТ");
 }
