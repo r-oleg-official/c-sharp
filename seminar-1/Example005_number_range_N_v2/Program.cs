@@ -3,7 +3,7 @@
 int a = 5;
 int b = -a;
 string c = "";
-while (b!=a)
+while (b <= a)
 {
     c = c + ", " + b++;
 }
