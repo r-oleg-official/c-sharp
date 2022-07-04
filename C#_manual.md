@@ -269,7 +269,22 @@ Circle `while ... do`:
          count = count + 1;
          count++; }
 
-Счетчик, варианты: 
+Circle `for`:
+
+    for (int i = 0; i < 3; i++)
+    {
+        Console.Write(i);
+    }
+    // Output:
+    // 012
+
+где, разделы (`инициализатор`; `условия`; `итератор`). 
+
+* `Инициализатор` (`i = 0`) - задаёт и инициализирует локальную переменную в цикле, вне цикла она недоступна;
+* `условия` (i < 3) - задаётся условие/условия;
+* `итератор` (i++) - определяте что произойдёт после каждого выполнения тела цикла.
+
+Варианты счетчиков: 
 
     count = count + 1
     count += 1; (-=, *=, /=)
@@ -339,6 +354,8 @@ Example 2:
 ### 10. Sources.
 1. [METANIT.COM](https://metanit.com/). 
 2. [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/).
+3. [overcoder](https://overcoder.net/t/c#).
+
 
 ### 11. IDE.
 
