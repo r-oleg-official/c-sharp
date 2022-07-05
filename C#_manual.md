@@ -366,13 +366,41 @@ Example 2:
     //     He said, "This is the last chance!"
     //     He said, "This is the last \u0063hance\x0021"
 
-### 10. Sources.
+### 10. Functions(Method).
+
+Функция, или Метод:
+
+* ID - индетификатор/имя, как переменные(латиница аА, 0 $\div$ 9, _, ). Цифра не может быть на 1-ом месте. Snake_Case не принят в C#, но возможен.
+* могут быть входные аргументы. 
+* может/не может возвращать значения (без возврата в некоторых ЯП наз., процедурами).
+
+Общее описание функции:
+
+ВозвращаемыйТипДанных ИмяМетода([ТипДанных1 ИмяАргумента1, ...]) <br>
+
+    { 
+        Тело Метода 
+        return ЗначениеСоответствующееВозвращаемомуТипуДанных;
+    }
+
+Example:
+
+$$ f(x) = x^2 + 1$$ 
+
+    double f(double x)
+    {
+        double result = x * x + 1;
+        return result
+    }
+
+Поиск мах числа через функцию - Лекция №2 по С# 00:15:30. 
+
+### Sources.
 1. [METANIT.COM](https://metanit.com/). 
 2. [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/).
 3. [overcoder](https://overcoder.net/t/c#).
 
-
-### 11. IDE.
+### IDE.
 
 Денис рекомендует для C# - `Rider`. `VS` даже полноценный глючит, подвисает. 
 
