@@ -395,6 +395,15 @@ $$ f(x) = x^2 + 1$$
 
 Поиск мах числа через функцию - Лекция №2 по С# 00:15:30. 
 
+#### Void.
+
+void SayHello()
+{
+    Console.WriteLine("Hello");
+}
+
+Void - ничего не возвращает, только выполняет действия.
+
 ### Sources.
 1. [METANIT.COM](https://metanit.com/). 
 2. [C# documentation](https://docs.microsoft.com/en-us/dotnet/csharp/).
