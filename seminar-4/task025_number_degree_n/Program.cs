@@ -1,8 +1,8 @@
 ﻿// Entering a number  and displaying in degree n.
 // Version by mine.
-Console.Write("Введи число от 1 и более: ");
+Console.Write("Введи число A от 1 и более: ");
 int number = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введи степень: ");
+Console.Write("Введи число В - степень числа: ");
 int degreeNumber = Convert.ToInt32(Console.ReadLine());
 
 int index = 1;
