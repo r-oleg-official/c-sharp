@@ -29,7 +29,7 @@ void PrintArray(int[] array)
             {
                 Console.Write($"[{array[i]},");
             }
-            if (i == array.Length - 1)
+            else if (i == array.Length - 1)
             {
                 Console.Write($"{array[i]}]");
             }
