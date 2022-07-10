@@ -5,7 +5,7 @@ int[] arrayRandom = new int[sizeArray];
 
 FillArray(arrayRandom);
 PrintArray(arrayRandom);
-Console.WriteLine($" -> {CalcEvenNumbers(arrayRandom)}");
+Console.WriteLine($" -> {CalcUnevenNumbers(arrayRandom)}");
 
 int InputSize(string msg)
 {
@@ -40,7 +40,7 @@ void PrintArray(int[] array)
         }
 }
 
-int CalcEvenNumbers(int[] array)
+int CalcUnevenNumbers(int[] array)
 {
     int sum = 0;
     for (int i = 0; i < array.Length; i++)
