@@ -1,0 +1,15 @@
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.csproj.AssemblyReference.cache
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.GeneratedMSBuildEditorConfig.editorconfig
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.AssemblyInfoInputs.cache
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.AssemblyInfo.cs
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.csproj.CoreCompileInputs.cache
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/bin/Debug/net6.0/task034_array_3+digits_count_even
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/bin/Debug/net6.0/task034_array_3+digits_count_even.deps.json
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/bin/Debug/net6.0/task034_array_3+digits_count_even.runtimeconfig.json
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/bin/Debug/net6.0/task034_array_3+digits_count_even.dll
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/bin/Debug/net6.0/task034_array_3+digits_count_even.pdb
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.dll
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/refint/task034_array_3+digits_count_even.dll
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.pdb
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/task034_array_3+digits_count_even.genruntimeconfig.cache
+/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/Debug/net6.0/ref/task034_array_3+digits_count_even.dll

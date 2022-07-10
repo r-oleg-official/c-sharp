@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/task034_array_3+digits_count_even.csproj": {}
+  },
+  "projects": {
+    "/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/task034_array_3+digits_count_even.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/task034_array_3+digits_count_even.csproj",
+        "projectName": "task034_array_3+digits_count_even",
+        "projectPath": "/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/task034_array_3+digits_count_even.csproj",
+        "packagesPath": "/home/oleg/.nuget/packages/",
+        "outputPath": "/home/oleg/Documents/projects/git_gb/c-sharp/seminar-5/task034_array_3+digits_count_even/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/oleg/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
