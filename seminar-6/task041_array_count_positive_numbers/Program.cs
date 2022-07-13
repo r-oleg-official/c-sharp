@@ -29,7 +29,7 @@ void PrintArray(double[] array)
         {
             if (i == 0)
             {
-                Console.Write($"[{array[i]},");
+                Console.Write($"[{array[i]};");
             }
             else if (i == array.Length - 1)
             {
@@ -37,7 +37,7 @@ void PrintArray(double[] array)
             }
             else
             {
-                Console.Write($"{array[i]},");
+                Console.Write($"{array[i]};");
             }
         }
 }
