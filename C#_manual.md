@@ -393,7 +393,38 @@ $$ f(x) = x^2 + 1$$
         return result
     }
 
-Поиск мах числа через функцию - Лекция №2 по С# 00:15:30. 
+Поиск макс. числа при помощи метода:
+
+    int Max(int arg1, int arg2, int arg3)
+    {
+        int result = arg1;
+        if (arg2 > result) result = arg2;
+        if (arg3 > result) result = arg3;
+        return result;
+    }
+
+    // Version-1.
+    //int max1 = Max(a1, b1, c1);
+    //int max2 = Max(a2, b2, c2);
+    //int max3 = Max(a3, b3, c3);
+    //int max = Max(max1, max2, max3);
+
+    // Version-2. Относится к функциональномум программированию.
+    int max = Max(
+        Max(a1, b1, c1),
+        Max(a2, b2, c2),
+        Max(a3, b3, c3));
+
+#### **Arrays.**
+
+##### Объявление массива.
+Type`[]` name_array = {value1, value2, ...};
+
+    int array[] = {0, 0, 0, 0, 0};
+    int array[] = new int[5];
+    int array[] = new int[]{0, 0, 0, 0, 0};
+    int array[] = new int[5]{1, 0, 2, 0, 3};
+
 
 #### **Void.**
 
