@@ -8,7 +8,7 @@ int Max(int arg1, int arg2, int arg3)
     return result;
 }
 // indexes    0   1   2   3   4   5   6   7   8
-int array = {15, 21, 39, 11, 12, 18, 55, 78, 99};
+int[] array = { 15, 21, 39, 11, 12, 18, 55, 78, 99 };
 
 int max = Max(
     Max(array[0], array[1], array[2]),
