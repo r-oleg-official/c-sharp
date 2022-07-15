@@ -540,7 +540,8 @@ $$ f(x) = x^2 + 1$$
 
 где `Double` - число `double`-типа, `Int32` - степень округления, кол-во знаков дробной части после запятой.
 
-#### **Arrays.**
+### **Arrays.**
+#### **One-dimensioanl array.**
 
 ##### Объявление массива.
 Type`[]` name_array = {value1, value2, ...};
@@ -569,6 +570,32 @@ Type`[]` name_array = {value1, value2, ...};
             index++;
         }
         return position;
+    }
+
+### **Two-dimensional array.**
+
+Задать двумерный массив можно:
+
+    string[,] table = new string[2,3];
+
+где, `string` - тип данных; `[,]` - указывает на 2-е размерности (строки и столбцы); `table` - наименование массива; `[2,3]` - сколько надо строк и столбцов соотвественно.
+
+Результат задания массива:
+
+    table[0,0]  table[0,1]  table[0,2]
+    table[1,0]  table[1,1]  table[1,2] 
+
+
+Например, прямоугольная таблица чисел, или `матрица` в математике с 5-ью строками и 8-мь столбцов:
+
+    int[,] matrix = new int[3, 4];
+    for (int i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            Console.Write($"{matrix[i, j]} ");
+        }
+        Console.WriteLine();
     }
 
 
