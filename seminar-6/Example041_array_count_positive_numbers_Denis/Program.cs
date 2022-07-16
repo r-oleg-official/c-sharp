@@ -1,10 +1,16 @@
 ﻿// User is entering array of a numbers. Need calculate sum of the positive numbers. 
 // Version by Denis.
 Console.WriteLine("Введите числа через запятую: ");
-string numberString = Console.ReadLine();
-
-int[] array = ParseArray(numberString, ',');
-PrintArray(array);
+string numbersString = Console.ReadLine() ?? "";
+int[] numbers = ParseArray(numbersString, ',');
+PrintArray(numbers);
+int count = 0;
+for(int i = 0; i< numbers.Length; i++)
+{
+    if(numbers[i] > 0)
+        count++;
+}
+Console.WriteLine(count);
 
 int[] ParseArray(string input, char separator)
 {
