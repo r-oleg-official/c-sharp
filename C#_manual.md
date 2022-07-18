@@ -246,6 +246,11 @@ Example:
 
     int a = new Random().Next(0, 10);
 
+Генератор псевдослучайных вещественных чисел (`min` $\div$ `max`):
+
+    double randomDouble = new Random().NextDouble() * (max - min) + min;
+
+
 ### 7. Условия, ветвления.
 
 Condition `if...else`:
