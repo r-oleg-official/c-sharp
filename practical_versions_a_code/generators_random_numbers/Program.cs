@@ -5,6 +5,8 @@ Random random = new Random();
 int randomInteger = random.Next(0, 100);
 //                                          (max - min) + min
 double randomDouble = random.NextDouble() * (100 - 0) + 0;
+// or
+// double randomDouble = new Random().NextDouble() * (max - min) + min;
 decimal randomDecimal = Convert.ToDecimal(random.NextDouble() * (100 - 0) + 0);
 float randomSingle = random.NextSingle() * (100 - 0) + 0;
 
