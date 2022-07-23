@@ -4,27 +4,26 @@ int[] sArray = new int[columns];
 FillArray(sArray);
 PrintArray(sArray);
 
-
-
-// в цикле прогонять массив И-раз 
-for (int k = 0; k < sArray.GetLength(0); k++)
+for (int k = 0; k < sArray.GetLength(0) - 1; k++)
 {
-    sd
+    // перед входом в цикл "check=true"
+    int tempVar = 0;
+    bool check = true;
+    for (int i = 0; i < sArray.GetLength(0) - 1 - k; i++)
+    {
+        if (sArray[i] > sArray[i+1])
+        {
+            tempVar = sArray[i+1];
+            sArray[i+1] = sArray[i];
+            sArray[i] = tempVar;
+            check = false;
+        }
+    }
+    // если во время прохода были замены, цикл повториться.
+    if (check == true) break; 
 }
 
-
-
-
-
-// метод на проход массива
-int pass1(int[] array)
-{
-    int tempVar = array[0];
-
-
-}
-
-
+PrintArray(sArray);
 
 int GetInputValue(string msg)
 {
