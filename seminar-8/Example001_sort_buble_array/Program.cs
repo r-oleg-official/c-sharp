@@ -6,7 +6,7 @@ PrintArray(sArray);
 
 for (int k = 0; k < sArray.GetLength(0) - 1; k++)
 {
-    // перед входом в след. цикл "check=true"
+    // before enter to next circle "check=true"
     int tempVar = 0;
     bool check = true;
     for (int i = 0; i < sArray.GetLength(0) - 1 - k; i++)
@@ -19,7 +19,7 @@ for (int k = 0; k < sArray.GetLength(0) - 1; k++)
             check = false;
         }
     }
-    // если во время прохода были замены, цикл повториться.
+    // if the elements was replacing, then the circle will be repeat.
     if (check == true) break;
 }
 
