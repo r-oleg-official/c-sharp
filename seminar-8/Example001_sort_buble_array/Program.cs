@@ -6,21 +6,21 @@ PrintArray(sArray);
 
 for (int k = 0; k < sArray.GetLength(0) - 1; k++)
 {
-    // перед входом в цикл "check=true"
+    // перед входом в след. цикл "check=true"
     int tempVar = 0;
     bool check = true;
     for (int i = 0; i < sArray.GetLength(0) - 1 - k; i++)
     {
-        if (sArray[i] > sArray[i+1])
+        if (sArray[i] > sArray[i + 1])
         {
-            tempVar = sArray[i+1];
-            sArray[i+1] = sArray[i];
+            tempVar = sArray[i + 1];
+            sArray[i + 1] = sArray[i];
             sArray[i] = tempVar;
             check = false;
         }
     }
     // если во время прохода были замены, цикл повториться.
-    if (check == true) break; 
+    if (check == true) break;
 }
 
 PrintArray(sArray);
