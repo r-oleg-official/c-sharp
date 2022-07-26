@@ -1,27 +1,26 @@
-﻿// Задайте двумерный массив. Напишите программу, которая упорядочит по убыванию элементы каждой строки двумерного массива.
-// Create a two-demensional array. 
+﻿// Create a two-demensional array. Sort the elements of each a row in descending order.
 // My version.
-
-int rows = GetInputValue("Введи количество строк: ");
-int columns = GetInputValue("Введи количество столбцов: ");
+Console.Clear();
+int rows = GetInputValue("Enter a number of rows: ");
+int columns = GetInputValue("Enter a number of columns: ");
 int[,] matrix = new int[rows, columns];
 FillArray(matrix);
 PrintMatrix(matrix);
 Console.WriteLine();
 
-for (int i = 0; i < matrix.GetLength(0); i++)
+for (int row = 0; row < matrix.GetLength(0); row++)
 {
     for (int k = 0; k < matrix.GetLength(1) - 1; k++)
     {
         bool stopSort = true;
-        int box = 0;
-        for (int j = 0; j < matrix.GetLength(1) - 1 - k; j++)
+        int swap = 0;
+        for (int col = 0; col < matrix.GetLength(1) - 1 - k; col++)
         {
-            if (matrix[i,j] < matrix[i, j + 1])
+            if (matrix[row, col] < matrix[row, col + 1])
             {
-                box = matrix[i, j + 1];
-                matrix[i, j + 1] = matrix[i,j];
-                matrix[i,j] = box;
+                swap = matrix[row, col + 1];
+                matrix[row, col + 1] = matrix[row, col];
+                matrix[row, col] = swap;
                 stopSort = false;
             }
         }
@@ -39,22 +38,22 @@ int GetInputValue(string msg)
 
 void FillArray(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int row = 0; row < array.GetLength(0); row++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int col = 0; col < array.GetLength(1); col++)
         {
-            array[i, j] = Convert.ToInt32(new Random().Next(0, 10));
+            array[row, col] = Convert.ToInt32(new Random().Next(0, 10));
         }
     }
 }
 
 void PrintMatrix(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int row = 0; row < array.GetLength(0); row++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int col = 0; col < array.GetLength(1); col++)
         {
-            Console.Write($"{array[i, j]} ");
+            Console.Write($"{array[row, col]} ");
         }
         Console.WriteLine();
     }
