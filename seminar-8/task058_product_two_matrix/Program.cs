@@ -1,5 +1,6 @@
-﻿// Create two a two-demensional arrays. Calculate product of these matrixs.
+﻿// Create two a two-demensional arrays. Calculate product both the matrixes.
 // My version.
+Console.Clear();
 int firstRows = GetInputValue("Enter how much rows of the first matrix: ");
 int firstColumns = GetInputValue("Enter how much columns of the first matrix: ");
 int secondRows = GetInputValue("Enter how much rows of the second matrix: ");
@@ -8,14 +9,12 @@ int[,] firstMatrix = new int[firstRows, firstColumns];
 int[,] secondMatrix = new int[secondRows, secondColumns];
 int[,] thirdMatrix = new int[secondRows, secondColumns];
 
-Console.WriteLine($"{firstMatrix.Length}, {secondMatrix.Length}");
-
 if (firstMatrix.Length != secondMatrix.Length)
 {
-    Console.WriteLine("Sizes don't match of matrixes!");
-
+    Console.WriteLine("Sizes don't match of matrices!");
+    return;
 }
-else if (firstMatrix.Length == secondMatrix.Length)
+if (firstMatrix.Length == secondMatrix.Length)
 {
     FillArray(firstMatrix);
     FillArray(secondMatrix);
@@ -36,11 +35,11 @@ int GetInputValue(string msg)
 
 void FillArray(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int row = 0; row < array.GetLength(0); row++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int col = 0; col < array.GetLength(1); col++)
         {
-            array[i, j] = Convert.ToInt32(new Random().Next(0, 10));
+            array[row, col] = Convert.ToInt32(new Random().Next(0, 10));
         }
     }
 }
@@ -59,20 +58,11 @@ void PrintMatrix(int[,] array)
 
 void ProductTwoMatrixs(int[,] firstArray, int[,] secondArray, int[,] resultArray)
 {
-    // if (firstArray.GetLength != secondArray.GetLength)
-    // {
-    //     Console.WriteLine("Sizes don't match of matrixes!");
-    //     return;
-    // }
-    // else if (firstArray.GetLength == secondArray.GetLength)
-    // {
-    for (int i = 0; i < firstArray.GetLength(0); i++)
+    for (int row = 0; row < firstArray.GetLength(0); row++)
     {
-        for (int j = 0; j < firstArray.GetLength(1); j++)
+        for (int col = 0; col < firstArray.GetLength(1); col++)
         {
-            resultArray[i, j] = firstArray[i, j] * secondArray[i, j];
+            resultArray[row, col] = firstArray[row, col] * secondArray[row, col];
         }
     }
-    // }
-    // return resultArray;
 }
