@@ -1,5 +1,5 @@
 ﻿Console.Write("Enter N: ");
-int number = Convert.ToInt32(ReadLine());
+int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(NaturalNumber(number));
 
 int NaturalNumber(int number);
