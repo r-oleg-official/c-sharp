@@ -10,7 +10,7 @@ int pages = GetInputValue("Enter a number pages of the cube: ");
 // int minValue = GetInputValue("Enter first number of a range: ");
 // int maxValue = GetInputValue("Enter last number of a range: ");
 int minValue = 10;
-int maxValue = 99;
+int maxValue = 250;
 int[,,] cube = new int[rows, cols, pages];
 
 FillCubeUniqNumbers(cube, minValue, maxValue);
@@ -18,18 +18,21 @@ FillCubeUniqNumbers(cube, minValue, maxValue);
 PrintCubeNotIndexes(cube);
 Console.WriteLine();
 // SortCubeBubble(cube);
-// PrintCubeNotIndexes(cube);
 
 // int sElement = GetInputValue("Enter a number: ");
 // bool resultFind = FindElementCube(cube, sElement);
 // Console.WriteLine(resultFind);
 
-
-
 int GetInputValue(string msg)
 {
     Console.Write(msg);
     return Convert.ToInt32(Console.ReadLine());
+}
+
+int GetRandomNumber(int minValue, int MaxValue)
+{
+    int random = new Random().Next(minValue, MaxValue + 1);
+    return random;
 }
 
 void PrintCubeWithIndexes(int[,,] cube)
@@ -69,26 +72,32 @@ void PrintCubeNotIndexes(int[,,] cube)
             }
             Console.WriteLine("|");
         }
+        Console.WriteLine();
     }
 }
 
 void FillCubeUniqNumbers(int[,,] cube, int minValue, int maxValue)
 {
+    bool isUnique = true;
     for (int page = 0; page < cube.GetLength(2); page++)
     {
+        // isUnique = true;
         for (int row = 0; row < cube.GetLength(0); row++)
         {
+            // isUnique = true;
             for (int col = 0; col < cube.GetLength(1); col++)
             {
-                bool isUnique;
+                isUnique = true;
+                // int var = GetRandomNumber(minValue, maxValue);
                 do
                 {
+                    // int var = GetRandomNumber(minValue, maxValue);
                     int var = new Random().Next(minValue, maxValue);
                     isUnique = FindElementCube(cube, var);
                     if (isUnique == false) cube[row, col, page] = var;
-                    else return;
+                    else break;
                 }
-                while (isUnique == true);
+                while (isUnique);
             }
         }
     }
@@ -96,18 +105,17 @@ void FillCubeUniqNumbers(int[,,] cube, int minValue, int maxValue)
 
 bool FindElementCube(int[,,] cubik, int sElement)
 {
-    bool check = false;
     for (int page = 0; page < cubik.GetLength(2); page++)
     {
         for (int row = 0; row < cubik.GetLength(0); row++)
         {
             for (int col = 0; col < cubik.GetLength(1); col++)
             {
-                if (cubik[row, col, page] == sElement) check = true;
+                if (cubik[row, col, page] == sElement) return true;
             }
         }
     }
-    return check;
+    return false;
 }
 
 // Sorting don't work.
