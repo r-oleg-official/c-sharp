@@ -1,7 +1,7 @@
 ﻿// Сформируйте трёхмерный массив из неповторяющихся двузначных чисел. 
 // Напишите программу, которая будет построчно выводить массив, добавляя индексы каждого элемента.
 // массив размером 2 x 2 x 1
-// My version.
+// My version. Don't work.
 
 Console.Clear();
 int rows = GetInputValue("Enter a number rows of the cube: ");
@@ -67,66 +67,38 @@ void PrintCubeNotIndexes(int[,,] cube)
 }
 
 
-// void FillCubeUniqNumbers(int[,,] cube, int minValue, int maxValue)
-// {
-// 
-//     for (int page = 0; page < cube.GetLength(2); page++)
-//     {
-//         for (int row = 0; row < cube.GetLength(0); row++)
-//         {
-//             for (int col = 0; col < cube.GetLength(1); col++)
-//             {
-//                 bool isUnique;
-//                 do
-//                 {
-//                     cube[row, col, page] = new Random().Next(minValue, maxValue);
-//                     isUnique = true;
-//                     for (int i = 0; i < page; i++)
-//                     {
-//                         for (int j = 0; j < row; j++)
-//                         {
-//                             for (int k = 0; k < col; k++)
-//                             {
-//                                 if (cube[row, col, page] == cube[j, k, i])
-//                                 {
-//                                     isUnique = false;
-//                                     return;
-//                                 }
-//                             }
-//                         }
-//                     }
-//                 }
-//                 while (!isUnique);
-//             }
-//         }
-//     }
-// }
-
-// Version-2
 void FillCubeUniqNumbers(int[,,] cube, int minValue, int maxValue)
 {
-    bool isUnique;
-    do
+    for (int page = 0; page < cube.GetLength(2); page++)
     {
-        int var = new Random().Next(minValue, maxValue);
-        isUnique = true;
-        for (int page = 0; page < cube.GetLength(2); page++)
+        for (int row = 0; row < cube.GetLength(0); row++)
         {
-            for (int row = 0; row < cube.GetLength(0); row++)
+            for (int col = 0; col < cube.GetLength(1); col++)
             {
-                for (int col = 0; col < cube.GetLength(1); col++)
+                bool isUnique;
+                do
                 {
-                    if (cube[row, col, page] == var)
+                    cube[row, col, page] = new Random().Next(minValue, maxValue);
+                    isUnique = true;
+                    for (int i = 0; i < page; i++)
                     {
-                        isUnique = false;
-                        return;
+                        for (int j = 0; j < row; j++)
+                        {
+                            for (int k = 0; k < col; k++)
+                            {
+                                if (cube[row, col, page] == cube[j, k, i])
+                                {
+                                    isUnique = false;
+                                    return;
+                                }
+                            }
+                        }
                     }
-                    cube[row, col, page] = var;
                 }
+                while (!isUnique);
             }
         }
     }
-    while (!isUnique);
 }
 
 void SortCubeBubble(int[,,] cube)
