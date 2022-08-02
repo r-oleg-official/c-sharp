@@ -1,9 +1,10 @@
 ﻿// Create two a two-demensional arrays. Calculate product both the matrixes.
-// My version 2.0 (right).
+// My version 2.0 (right version).
 
 Console.Clear();
 int firstRows = GetInputValue("Enter a number of rows of the first matrix: ");
 int firstColumns = GetInputValue("Enter a number of columns of the first matrix: ");
+Console.WriteLine();
 Console.Write("The number of columns of the first matrix must be equal ");
 Console.WriteLine("to the number of the rows of the second matrix!");
 int secondRows = GetInputValue("Enter a number of rows of the second matrix: ");
@@ -33,8 +34,6 @@ for (int row = 0; row < thirdMatrix.GetLength(0); row++)
 {
     for (int col = 0; col < thirdMatrix.GetLength(1); col++)
     {
-        // int sum = 0;
-
         thirdMatrix[row, col] = CalcProduct(firstMatrix, secondMatrix, row, col);
     }
 }
@@ -80,4 +79,3 @@ void PrintMatrix(int[,] array)
     }
     Console.WriteLine();
 }
-
