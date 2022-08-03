@@ -4,22 +4,38 @@ Delete are row and column on the cross with a minimal element to the matrix.
 My version 1.0.
 */
 Console.Clear();
-int rows = GetInputValue("Enter a number of rows of the matrix: ");
-int columns = GetInputValue("Enter a number of columns of the matrix: ");
-// int minNumber = GetInputValue("Enter a minimal number to the matrix: ");
-// int maxNumber = GetInputValue("Enter a maximal number to the matrix: ");
-int[,] matrix = new int[rows, columns];
-int minNumber = 5;
-int maxNumber = 80;
+int rows = GetInputValue("Enter a number of rows of the matrix: "),
+    columns = GetInputValue("Enter a number of columns of the matrix: ");
+// int minFillNumber = GetInputValue("Enter a minimal number to the matrix: ");
+// int maxFillNumber = GetInputValue("Enter a maximal number to the matrix: ");
+int[,] beginMatrix = new int[rows, columns];
+int minFillNumber = 5,
+    maxFillNumber = 80;
 
-FillMatrix(matrix, minNumber, maxNumber);
-PrintMatrix(matrix);
+FillMatrix(beginMatrix, minFillNumber, maxFillNumber);
+PrintMatrix(beginMatrix);
+Console.WriteLine();
 
-string minElement = FindMinElementMatrix(matrix);
-int rowMinElement = Convert.ToInt32(minElement).Parse(",");
-// int colMinElement = ConvertminElement.Parse(",");
-Console.WriteLine($"{rowMinElement}");
+int min = beginMatrix[0, 0],
+// int min = 0,
+    indexRowMinElement = 0,
+    indexColumnMinElement = 0;
+for (int row = 0; row < beginMatrix.GetLength(0); row++)
+{
+    for (int col = 0; col < beginMatrix.GetLength(1); col++)
+    {
+        if (beginMatrix[row, col] < min)
+        {
+            min = beginMatrix[row, col];
+            indexRowMinElement = row;
+            indexColumnMinElement = col;
+        }
+    }
+}
 
+int[,] endMatrix = new int[beginMatrix.GetLength(0) - 1, beginMatrix.GetLength(1) - 1];
+RemoveRowColumnInCrossElement(beginMatrix, endMatrix, indexRowMinElement, indexColumnMinElement);
+PrintMatrix(endMatrix);
 
 int GetInputValue(string msg)
 {
@@ -40,31 +56,35 @@ void FillMatrix(int[,] array, int minValue, int MaxValue)
 
 void PrintMatrix(int[,] array)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int row = 0; row < array.GetLength(0); row++)
     {
         Console.Write("| ");
-        for (int j = 0; j < array.GetLength(1) - 1; j++)
+        for (int col = 0; col < array.GetLength(1) - 1; col++)
         {
-            Console.Write($"{array[i, j]}, ");
+            Console.Write($"{array[row, col]}, ");
         }
-        Console.WriteLine($"{array[i, array.GetLength(1) - 1]} |");
+        Console.WriteLine($"{array[row, array.GetLength(1) - 1]} |");
     }
 }
 
-string FindMinElementMatrix(int[,] array)
+void RemoveRowColumnInCrossElement(int[,] arraySource, int[,] arrayResult, int indexRow, int indexColumn)
 {
-    int min = array[0, 0];
-    string position = String.Empty;
-    for (int row = 0; row < array.GetLength(0); row++)
+    int rowResult = 0,
+        colResult = 0;
+    for (int row = 0; row < arraySource.GetLength(0); row++)
     {
-        for (int col = 0; col < array.GetLength(1); col++)
+        if (row != indexRow)
         {
-            if (array[row, col] < min) 
+            for (int col = 0; col < arraySource.GetLength(1); col++)
             {
-                min = array[row, col];
-                position = row + "," + col;
+                if (col != indexColumn)
+                {
+                    arrayResult[rowResult, colResult] = arraySource[row, col];
+                    colResult++;
+                }
             }
+            rowResult++;
         }
+        colResult = 0;
     }
-    return position;
 }
