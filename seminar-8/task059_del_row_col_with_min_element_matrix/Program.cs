@@ -17,7 +17,6 @@ PrintMatrix(beginMatrix);
 Console.WriteLine();
 
 int min = beginMatrix[0, 0],
-// int min = 0,
     indexRowMinElement = 0,
     indexColumnMinElement = 0;
 for (int row = 0; row < beginMatrix.GetLength(0); row++)
