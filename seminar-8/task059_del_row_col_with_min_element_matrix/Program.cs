@@ -15,9 +15,10 @@ int maxNumber = 80;
 FillMatrix(matrix, minNumber, maxNumber);
 PrintMatrix(matrix);
 
-
-
-
+string minElement = FindMinElementMatrix(matrix);
+int rowMinElement = Convert.ToInt32(minElement).Parse(",");
+// int colMinElement = ConvertminElement.Parse(",");
+Console.WriteLine($"{rowMinElement}");
 
 
 int GetInputValue(string msg)
@@ -48,4 +49,22 @@ void PrintMatrix(int[,] array)
         }
         Console.WriteLine($"{array[i, array.GetLength(1) - 1]} |");
     }
+}
+
+string FindMinElementMatrix(int[,] array)
+{
+    int min = array[0, 0];
+    string position = String.Empty;
+    for (int row = 0; row < array.GetLength(0); row++)
+    {
+        for (int col = 0; col < array.GetLength(1); col++)
+        {
+            if (array[row, col] < min) 
+            {
+                min = array[row, col];
+                position = row + "," + col;
+            }
+        }
+    }
+    return position;
 }
