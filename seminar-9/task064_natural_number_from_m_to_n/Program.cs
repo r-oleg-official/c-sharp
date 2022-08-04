@@ -3,6 +3,7 @@ Input M, N and displaying everything a natural numbers in range from M to N.
 My version.
 */
 
+Console.Clear();
 int m = GetInputValue("Enter a first number: ");
 int n = GetInputValue("Enter a second number: ");
 Console.Clear();
