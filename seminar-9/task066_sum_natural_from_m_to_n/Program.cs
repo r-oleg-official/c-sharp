@@ -1,0 +1,25 @@
+﻿/* 
+Input M, N and displaying everything a natural numbers in range from M to N.
+My version.
+*/
+
+Console.Clear();
+int m = GetInputValue("Enter a first number: ");
+int n = GetInputValue("Enter a second number: ");
+
+Console.Clear();
+int sum = NaturalNumber(m, n);
+Console.Write($"M = {m}; N = {n} -> {sum}");
+Console.WriteLine();
+
+int GetInputValue(string msg)
+{
+    Console.Write(msg);
+    return Convert.ToInt32(Console.ReadLine());
+}
+
+int NaturalNumber(int firstNumber, int secondNumber)
+{
+    if (secondNumber == firstNumber) return firstNumber;
+    return secondNumber + NaturalNumber(firstNumber, secondNumber - 1);
+}
