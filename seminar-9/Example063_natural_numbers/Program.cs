@@ -2,7 +2,7 @@
 int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(NaturalNumber(number));
 
-int NaturalNumber(int number);
+int NaturalNumber(int number)
 {
     if(number == 1)
         return 1;
