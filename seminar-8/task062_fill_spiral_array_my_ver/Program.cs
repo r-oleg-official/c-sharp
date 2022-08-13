@@ -27,11 +27,11 @@ while (i <= endCount)
 
 PrintMatrix(spiral);
 
-int GetInputValue(string msg)
-{
-    Console.Write(msg);
-    return Convert.ToInt32(Console.ReadLine());
-}
+// int GetInputValue(string msg)
+// {
+//     Console.Write(msg);
+//     return Convert.ToInt32(Console.ReadLine());
+// }
 
 int FillRight(int[,] matrix, int number, int sRow, int sCol, int lRow, int lCol)
 {
