@@ -1,10 +1,11 @@
 ﻿// Entering number N and displaying numbers of a Fibonachchi.
 // First and second numbers of the Fibonachchi: 0 and 1.
 // Version Michail with a parser. Don't right version. And I'm upgrade. 
+// ??"" - use a null-coalescing operator ?? with some default value - then don't errors.
 
 Console.Write("Введите число: ");
 //string input = Console.ReadLine();
-int N = int.Parse(Console.ReadLine());
+int N = int.Parse(Console.ReadLine()??"");
 
 Console.Write("The {0} Fibonacci: ", N);
 
