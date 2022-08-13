@@ -18,6 +18,7 @@ FillCubeUniqNumbers(cube, minValue, maxValue);
 PrintCubeNotIndexes(cube);
 Console.WriteLine();
 SortCubeBubble(cube);
+// PrintCubeWithIndexes(cube);
 PrintCubeNotIndexes(cube);
 
 int GetInputValue(string msg)
@@ -26,27 +27,27 @@ int GetInputValue(string msg)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-void PrintCubeWithIndexes(int[,,] cube)
-{
-    for (int page = 0; page < cube.GetLength(2); page++)
-    {
-        Console.WriteLine($"Page - {page + 1}");
-        for (int row = 0; row < cube.GetLength(0); row++)
-        {
-            // Console.WriteLine("---------");
-            Console.Write("|");
-            for (int col = 0; col < cube.GetLength(1); col++)
-            {
-                // Console.Write($"| {row},{col},{page} |");
-                Console.Write($"| {cube[row, col, page]}({row},{col},{page}) |");
-            }
-            // Console.Write("----------------");
-            Console.WriteLine("|");
-            // Console.WriteLine();
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintCubeWithIndexes(int[,,] cube)
+// {
+//     for (int page = 0; page < cube.GetLength(2); page++)
+//     {
+//         Console.WriteLine($"Page - {page + 1}");
+//         for (int row = 0; row < cube.GetLength(0); row++)
+//         {
+//             // Console.WriteLine("---------");
+//             Console.Write("|");
+//             for (int col = 0; col < cube.GetLength(1); col++)
+//             {
+//                 // Console.Write($"| {row},{col},{page} |");
+//                 Console.Write($"| {cube[row, col, page]}({row},{col},{page}) |");
+//             }
+//             // Console.Write("----------------");
+//             Console.WriteLine("|");
+//             // Console.WriteLine();
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
 void PrintCubeNotIndexes(int[,,] cube)
 {
