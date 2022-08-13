@@ -70,33 +70,33 @@ void PrintCubeWithIndexes(int[,,] cube)
     }
 }
 
-void PrintCubeNotIndexes(int[,,] cube)
-{
-    for (int page = 0; page < cube.GetLength(2); page++)
-    {
-        Console.WriteLine($"Page-{page + 1}");
-        for (int row = 0; row < cube.GetLength(0); row++)
-        {
-            Console.Write("|");
-            for (int col = 0; col < cube.GetLength(1); col++)
-            {
-                Console.Write(cube[row, col, page] + " ");
+// void PrintCubeNotIndexes(int[,,] cube)
+// {
+//     for (int page = 0; page < cube.GetLength(2); page++)
+//     {
+//         Console.WriteLine($"Page-{page + 1}");
+//         for (int row = 0; row < cube.GetLength(0); row++)
+//         {
+//             Console.Write("|");
+//             for (int col = 0; col < cube.GetLength(1); col++)
+//             {
+//                 Console.Write(cube[row, col, page] + " ");
+// 
+//             }
+//             Console.WriteLine("|");
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
-            }
-            Console.WriteLine("|");
-        }
-        Console.WriteLine();
-    }
-}
-
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine();
-}
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.WriteLine();
+// }
 
 void FillArrayUniqNumbers(int[] array)
 {
